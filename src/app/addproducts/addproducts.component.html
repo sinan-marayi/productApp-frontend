@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      <div class="row g-3">
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <label for="" class="form-label">Product Name</label>
+          <input
+            [(ngModel)]="productName"
+            type="text"
+            class="form-control"
+            name="productName"
+          />
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <label for="" class="form-label">Product Code</label>
+          <input
+            [(ngModel)]="productCode"
+            type="text"
+            class="form-control"
+            name="productCode"
+          />
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <label for="" class="from-label">Manufacturing Date</label>
+          <input
+            [(ngModel)]="manufacturingDate"
+            type="text"
+            class="form-control"
+            name="manufacturingDate"
+          />
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <label for="" class="form-label">Expiring Date</label>
+          <input
+            [(ngModel)]="expiringDate"
+            type="text"
+            class="form-control"
+            name="expiringDate"
+          />
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <label for="" class="form-label">Price</label>
+          <input
+            [(ngModel)]="price"
+            type="text"
+            class="form-control"
+            name="price"
+          />
+        </div>
+        <div
+          class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+        >
+          <button (click)="passDetails()" class="btn btn-primary">ADD</button>
+        </div>
+        <div *ngIf="isSuccessfull"
+          class="alert alert-success alert-dismissible fade show"
+          role="alert"
+        >
+          You successfully added the item
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

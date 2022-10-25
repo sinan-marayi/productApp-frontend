@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product Code</th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Man Date</th>
+        <th scope="col">Exp Date</th>
+        <th scope="col">Deletion</th>
+        <th scope="col">Updation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of data">
+        <th scope="row">{{i.productCode}}</th>
+        <td>{{i.productName}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.manufacturingDate}}</td>
+        <td >{{i.expiringData}}</td>
+        <td ><button (click)="deleteProduct(i._id,i.productName)" class="btn btn-danger">Delete</button></td>
+        <td ><button routerLink="/update" (click)="toUpdate(i._id)" class="btn btn-secondary">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="isDelete" class="alert alert-danger alert-dismissible fade show" role="alert">
+    You delete the item {{deletedProduct}}
+  </div>
